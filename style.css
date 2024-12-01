@@ -12,6 +12,7 @@ body {
   color: #333;
   height: 100vh;
   overflow: hidden;
+  cursor: none; /* Hide the default mouse cursor */
 }
 
 /* Custom Cursor Style */
