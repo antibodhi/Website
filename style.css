@@ -28,11 +28,8 @@ body {
   transition: transform 0.2s ease; /* Optional: Add a smooth scale effect */
 }
 
-/* Content styling */
-.content {
-  text-align: center;
-  padding: 20px;
-}
-.content h1 {
-  font-size: 3rem;
+/* This ensures there is no text or unnecessary content */
+body, html {
+  margin: 0;
+  padding: 0;
 }
