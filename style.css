@@ -1,0 +1,36 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f0f0f0; /* Light background color */
+  height: 100vh;
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  position: relative; /* For cursor positioning */
+}
+
+.Cursor {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black cursor */
+  border-radius: 50%;
+  pointer-events: none; /* Prevents interference with other elements */
+  z-index: 9999; /* Ensure it's above all other elements */
+  filter: url(#goo); /* Applies the gooey effect filter from SVG */
+  transition: transform 0.1s ease-out; /* Smooth transition for cursor movement */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+}
+
