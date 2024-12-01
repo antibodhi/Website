@@ -1,36 +1,37 @@
-/* Basic Reset */
+/* Reset default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styles for background and text */
 body {
-  margin: 0;
-  background: #f0f0f0; /* Light background color */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
   height: 100vh;
-  overflow: hidden; /* Hide overflow to prevent scrollbars */
-  position: relative; /* For cursor positioning */
+  overflow: hidden;
 }
 
-.Cursor {
+/* Custom Cursor Style */
+#cursor {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black cursor */
+  background: transparent;
+  pointer-events: none; /* Ensure the cursor doesn't block interactions */
+  z-index: 9999;
   border-radius: 50%;
-  pointer-events: none; /* Prevents interference with other elements */
-  z-index: 9999; /* Ensure it's above all other elements */
-  filter: url(#goo); /* Applies the gooey effect filter from SVG */
-  transition: transform 0.1s ease-out; /* Smooth transition for cursor movement */
+  border: 2px solid black; /* Customize the cursor's border */
+  transition: transform 0.2s ease; /* Optional: Add a smooth scale effect */
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Content styling */
+.content {
+  text-align: center;
+  padding: 20px;
 }
-
-h1 {
-  font-family: 'Inter', sans-serif;
+.content h1 {
+  font-size: 3rem;
 }
-
