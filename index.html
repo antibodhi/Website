@@ -3,55 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gooey Cursor Effect</title>
-  
-  <!-- Link to the CSS file -->
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      margin: 0;
-      background: #f0f0f0;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .Cursor {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      filter: url(#goo);
-    }
-  </style>
+  <title>Custom Cursor Example</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="cursor" class="Cursor"></div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-        <feColorMatrix in="blur" mode="matrix"
-          values="1 0 0 0 0  
-                  0 1 0 0 0  
-                  0 0 1 0 0  
-                  0 0 0 35 -15" 
-          result="goo" />
-        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-      </filter>
-    </defs>
-  </svg>
+  <!-- Custom Cursor Canvas -->
+  <canvas id="cursor"></canvas>
 
-  <script>
-    document.addEventListener('mousemove', (e) => {
-      const cursor = document.getElementById('cursor');
-      cursor.style.left = `${e.pageX}px`;
-      cursor.style.top = `${e.pageY}px`;
-    });
-  </script>
+  <!-- Your site content goes here -->
+  <div class="content">
+    <h1>Welcome to My Site</h1>
+    <p>Hover around the site to see the custom cursor effect!</p>
+  </div>
+
+  <!-- Link to your JavaScript file -->
+  <script src="scripts.js"></script>
 </body>
 </html>
